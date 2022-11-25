@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/11/23 11:11:26 by anlima           ###   ########.fr       */
+/*   Updated: 2022/11/25 13:03:04 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 int	main(void)
 {
-	
+	int	pid;
+
+	pid = getpid();
+	ft_putstr("The server is up and running. It's PID is: ");
+	ft_putnbr(pid);
+	return (0);
 }
