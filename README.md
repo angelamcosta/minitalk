@@ -1,6 +1,8 @@
 # :desktop_computer: Minitalk
 
 <div align=center>
+
+  ![badge](https://raw.githubusercontent.com/angelamcosta/angelamcosta/main/42_badges/minitalke.png)
   
   [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-by-codebabes.svg)](https://forthebadge.com)
   
@@ -46,5 +48,5 @@ client.
 
 ## Tasks
 
-- :white_large_square: Mandatory part
-- :white_large_square: Bonus part
+- :white_large_square: Mandatory part (ongoing)
+- :white_large_square: Bonus part (ongoing)
