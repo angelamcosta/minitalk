@@ -6,29 +6,39 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/11/29 16:39:39 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/01 19:16:12 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
+void	ft_putnbr(long nbr)
+{
+	char	temp;
+
+	if (nbr / 10 > 0)
+		ft_putnbr(nbr / 10);
+	temp = nbr % 10 + '0';
+	write(1, &temp, 1);
+}
+
 void	sig_handle(int signal)
 {
-	ft_putstr("The handler was called\n");
+	write(1, "The handler was called\n", 23);
 }
 
 int	main(void)
 {
-	int			pid;
+	struct sigaction	sigact;
 
-	pid = getpid();
-	signal(SIGINT, sig_handle);
-	ft_putstr("The server is up and running. It's PID is: ");
-	ft_putnbr(pid);
-	ft_putstr("\n");
+	sigact.sa_handler = &sig_handle;
+	sigaction(SIGINT, &sigact, 0);
+	write(1, "The server is up and running. It's PID is: ", 43);
+	ft_putnbr(getpid());
+	write(1, "\n", 1);
 	while (1)
 	{
-		ft_putstr("Inside the main function\n");
+		write(1, "Inside the main function\n", 25);
 		sleep(1);
 	}
 	return (0);
