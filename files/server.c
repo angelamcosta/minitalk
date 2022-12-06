@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/01 19:16:12 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/06 11:59:11 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(void)
 	struct sigaction	sigact;
 
 	sigact.sa_handler = &sig_handle;
+	sigact.sa_flags = SA_RESTART;
 	sigaction(SIGINT, &sigact, 0);
 	write(1, "The server is up and running. It's PID is: ", 43);
 	ft_putnbr(getpid());
