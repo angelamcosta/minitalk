@@ -17,13 +17,21 @@ CLEAR	=	\033[0m
 all:		$(NAME)
 
 $(NAME):
-			@echo -e "$(YELLOW)Compiling:$(CLEAR)"
-			$(CC) $(CFLAGS) -o $(SERVER) $(SERVER).c
-			$(CC) $(CFLAGS) -o $(CLIENT) $(CLIENT).c
+			@echo -e "$(PINK)Compiling the server.$(CLEAR)"
+			@$(CC) $(CFLAGS) -o $(SERVER) $(SERVER).c
+			@echo -e "$(GREEN)[OK]$(CLEAR)"
+			@sleep 0.5
+			@echo -e "$(PINK)Compiling the Client.$(CLEAR)"
+			@echo -e "$(GREEN)[OK]$(CLEAR)"
+			@sleep 0.5
+			@$(CC) $(CFLAGS) -o $(CLIENT) $(CLIENT).c
 			@echo -e "$(GREEN)Success!$(CLEAR)"
 
 clean:
-			$(RM) $(CLIENT) $(SERVER)
+			@echo -e "$(RED)Removing all compiled files.$(CLEAR)"
+			@$(RM) $(CLIENT) $(SERVER)
+			@sleep 0.5
+			@echo -e "$(GREEN)Success!$(CLEAR)"
 
 fclean:		clean
 

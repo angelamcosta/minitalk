@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/06 11:59:11 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/06 15:46:27 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	ft_putnbr(long nbr)
 
 void	sig_handle(int signal)
 {
-	write(1, "The handler was called\n", 23);
+	write(1, "The handler was called by the signal: ", 38);
+	ft_putnbr(signal);
 }
 
 int	main(void)
@@ -38,9 +39,6 @@ int	main(void)
 	ft_putnbr(getpid());
 	write(1, "\n", 1);
 	while (1)
-	{
-		write(1, "Inside the main function\n", 25);
 		sleep(1);
-	}
 	return (0);
 }
