@@ -20,16 +20,16 @@ $(NAME):
 			@echo -e "$(BLUE)Make all$(CLEAR)\n$(PINK)Compiling the server.$(CLEAR)"
 			@$(CC) $(CFLAGS) -o $(SERVER) $(SERVER).c
 			@echo -e "$(GREEN)[OK]$(CLEAR)"
-			@sleep 0.5
+			@sleep 0.2
 			@echo -e "$(PINK)Compiling the Client.$(CLEAR)\n$(GREEN)[OK]$(CLEAR)"
-			@sleep 0.5
+			@sleep 0.2
 			@$(CC) $(CFLAGS) -o $(CLIENT) $(CLIENT).c
 			@echo -e "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)"
 
 clean:
 			@echo -e "$(BLUE)Make all$(CLEAR)\n$(RED)Removing all compiled files.$(CLEAR)"
 			@$(RM) $(CLIENT) $(SERVER)
-			@sleep 0.5
+			@sleep 0.2
 			@echo -e "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)"
 
 fclean:		clean
