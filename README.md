@@ -48,5 +48,5 @@ client.
 
 ## Tasks
 
-- :white_large_square: Mandatory part (ongoing)
+- :ballot_box_with_check: Mandatory part
 - :white_large_square: Bonus part (ongoing)
