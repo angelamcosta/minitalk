@@ -6,11 +6,13 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/08 16:14:25 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/08 17:02:21 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
+
+static unsigned int	g_i;
 
 void	ft_putnbr(long nbr)
 {
@@ -24,10 +26,25 @@ void	ft_putnbr(long nbr)
 
 void	sig_handle(int signal)
 {
+	unsigned int	nb[8];
+	unsigned int	n;
+	int				i;
+
 	if (signal == SIGUSR1)
-		write(1, "0", 1);
+		nb[g_i] = 0;
 	else if (signal == SIGUSR2)
-		write(1, "1", 1);
+		nb[g_i] = 1;
+	if (g_i == 7)
+	{
+		n = 0;
+		i = 0;
+		while (i < 8)
+			n = n * 2 + (nb[i++]);
+		write(1, &n, 1);
+		g_i = 0;
+	}
+	else
+		g_i++;
 }
 
 int	main(void)
@@ -42,6 +59,6 @@ int	main(void)
 	ft_putnbr(getpid());
 	write(1, "\n", 1);
 	while (1)
-		sleep(1);
+		pause();
 	return (0);
 }

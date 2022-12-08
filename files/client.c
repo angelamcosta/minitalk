@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/08 13:16:20 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/08 17:04:18 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ void	ft_send_signal(int pid, char c)
 		nb[--i] = n % 2;
 		n /= 2;
 	}
+	while (i > 0)
+		nb[--i] = 0;
 	while (i < 8)
 	{
 		if (nb[i] == 0)
@@ -67,6 +69,7 @@ int	main(int argc, char **argv)
 		pid = ft_atoi(argv[1]);
 		while (argv[2] && *argv[2])
 			ft_send_signal(pid, *argv[2]++);
+		ft_send_signal(pid, '\n');
 	}
 	return (0);
 }
