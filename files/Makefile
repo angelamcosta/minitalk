@@ -27,7 +27,7 @@ $(NAME):
 			@echo -e "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)"
 
 clean:
-			@echo -e "$(BLUE)Make all$(CLEAR)\n$(RED)Removing all compiled files.$(CLEAR)"
+			@echo -e "$(BLUE)Make clean/fclean$(CLEAR)\n$(RED)Removing all compiled files.$(CLEAR)"
 			@$(RM) $(CLIENT) $(SERVER)
 			@sleep 0.2
 			@echo -e "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)"
