@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/08 10:45:32 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/08 11:07:25 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,40 @@ int	ft_atoi(char *str)
 	return (nb);
 }
 
-void	ft_send_signal(char *pid, char *str)
+void	ft_send_signal(int pid, char c)
 {
-	(void)(pid);
-	(void)(str);
+	unsigned int	nb[8];
+	int				n;
+	int				i;
+
+	n = c;
+	i = 8;
+	while (n > 0 && i > 0)
+	{
+		nb[--i] = n % 2;
+		n /= 2;
+	}
+	while (i < 8)
+	{
+		if (nb[i] == 0)
+			kill(pid, SIGUSR1);
+		else if (nb[i] == 1)
+			kill(pid, SIGUSR2);
+		i++;
+	}
 }
 
 int	main(int argc, char **argv)
 {
+	int	pid;
+
 	if (argc != 3)
 		write(1, "Args error", 10);
 	else
-		kill(ft_atoi(argv[1]), SIGUSR1);
+	{
+		pid = ft_atoi(argv[1]);
+		while (argv[2] && *argv[2])
+			ft_send_signal(pid, *argv[2]++);
+	}
 	return (0);
 }

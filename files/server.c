@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/08 10:43:25 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/08 11:35:02 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	sig_handle(int signal)
 {
 	write(1, "The handler was called by the signal: ", 38);
 	ft_putnbr(signal);
+	write(1, "\n", 1);
 }
 
 int	main(void)
@@ -35,6 +36,7 @@ int	main(void)
 	sigact.sa_handler = &sig_handle;
 	sigact.sa_flags = SA_RESTART;
 	sigaction(SIGUSR1, &sigact, 0);
+	sigaction(SIGUSR2, &sigact, 0);
 	write(1, "The server is up and running. It's PID is: ", 43);
 	ft_putnbr(getpid());
 	write(1, "\n", 1);
