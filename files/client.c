@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/06 16:16:17 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/08 10:45:32 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int	main(int argc, char **argv)
 	if (argc != 3)
 		write(1, "Args error", 10);
 	else
-		ft_send_signal(argv[1], argv[2]);
+		kill(ft_atoi(argv[1]), SIGUSR1);
 	return (0);
 }
