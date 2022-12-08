@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/08 11:07:25 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/08 13:16:20 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_send_signal(int pid, char c)
 			kill(pid, SIGUSR1);
 		else if (nb[i] == 1)
 			kill(pid, SIGUSR2);
+		usleep(50);
 		i++;
 	}
 }
