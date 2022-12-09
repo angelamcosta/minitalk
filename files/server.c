@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/08 17:02:21 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/09 15:52:57 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	main(void)
 	sigact.sa_flags = SA_RESTART;
 	sigaction(SIGUSR1, &sigact, 0);
 	sigaction(SIGUSR2, &sigact, 0);
+	write(1, "\e[4:3mWelcome to anlima's minitalk project!\e[4:0m\n", 51);
 	write(1, "The server is up and running. It's PID is: ", 43);
 	ft_putnbr(getpid());
 	write(1, "\n", 1);
