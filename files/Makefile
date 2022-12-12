@@ -17,20 +17,20 @@ CLEAR	=	\033[0m
 all:		$(NAME)
 
 $(NAME):
-			@echo -e "$(BLUE)Make all$(CLEAR)\n$(PINK)Compiling the server.$(CLEAR)"
+			@echo "$(BLUE)Make all$(CLEAR)\n$(PINK)Compiling the server.$(CLEAR)"
 			@$(CC) $(CFLAGS) -o $(SERVER) $(SERVER).c
-			@echo -e "$(GREEN)[OK]$(CLEAR)"
+			@echo "$(GREEN)[OK]$(CLEAR)"
 			@sleep 0.2
-			@echo -e "$(PINK)Compiling the Client.$(CLEAR)\n$(GREEN)[OK]$(CLEAR)"
+			@echo "$(PINK)Compiling the Client.$(CLEAR)\n$(GREEN)[OK]$(CLEAR)"
 			@sleep 0.2
 			@$(CC) $(CFLAGS) -o $(CLIENT) $(CLIENT).c
-			@echo -e "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)"
+			@echo "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)\n"
 
 clean:
-			@echo -e "$(BLUE)Make clean/fclean$(CLEAR)\n$(RED)Removing all compiled files.$(CLEAR)"
+			@echo "$(BLUE)Make clean/fclean$(CLEAR)\n$(RED)Removing all compiled files.$(CLEAR)"
 			@$(RM) $(CLIENT) $(SERVER)
 			@sleep 0.2
-			@echo -e "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)"
+			@echo "$(GREEN)Success!$(CLEAR)\n$(YELLOW)Finished$(CLEAR)\n"
 
 fclean:		clean
 
