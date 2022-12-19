@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:54 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/09 15:52:57 by anlima           ###   ########.fr       */
+/*   Updated: 2022/12/19 10:57:23 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ int	main(void)
 	ft_putnbr(getpid());
 	write(1, "\n", 1);
 	while (1)
-		pause();
+		usleep(100);
 	return (0);
 }
