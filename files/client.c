@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:02:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/19 11:39:16 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/08 14:43:50 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,29 @@ int	ft_atoi(char *str)
 
 void	ft_send_signal(int pid, char c)
 {
-	unsigned int	nb[8];
-	int				n;
-	int				i;
+	int	arr[8];
+	int	n;
+	int	i;
 
 	n = c;
-	i = 8;
-	while (n > 0 && i > 0)
+	i = 7;
+	while (i >= 0)
 	{
-		nb[--i] = n % 2;
-		n /= 2;
+		if (n == 0 || (n & 1) == 0)
+			arr[i] = 0;
+		else if ((n & 1) == 1)
+			arr[i] = 1;
+		if (n > 0)
+			n >>= 1;
+		i--;
 	}
-	while (i > 0)
-		nb[--i] = 0;
-	while (i < 8)
+	while (++i < 8)
 	{
-		if (nb[i] == 0)
+		if (arr[i] == 0)
 			kill(pid, SIGUSR1);
-		else if (nb[i] == 1)
+		else
 			kill(pid, SIGUSR2);
 		usleep(50);
-		i++;
 	}
 }
 
