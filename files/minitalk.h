@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 11:10:18 by anlima            #+#    #+#             */
-/*   Updated: 2022/12/06 15:19:06 by anlima           ###   ########.fr       */
+/*   Updated: 2023/03/08 14:44:51 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 # include <unistd.h>
 # include <signal.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 #endif
