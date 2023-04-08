@@ -20,7 +20,7 @@
 
 The purpose of this project is to code a small data exchange program using UNIX signals. It is an introductory project for the bigger UNIX projects that will appear later on in the cursus. 
 
-The subject of the project can be found in [this link](https://raw.githubusercontent.com/angelamcosta/minitalk/main/en.subject.pdf).
+The subject of the project can be found in [this link](https://raw.githubusercontent.com/angelamcosta/minitalk/main/en.subject.pdf) and the wiki explaining my solution to this project can be found [here](https://github.com/angelamcosta/minitalk/wiki).
 
 ## :round_pushpin: Mandatory part
 
