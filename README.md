@@ -4,9 +4,14 @@
 
   ![badge](https://raw.githubusercontent.com/angelamcosta/angelamcosta/main/42_badges/minitalke.png)
   
-  [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-by-codebabes.svg)](https://forthebadge.com)
+  [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-by-codebabes.svg)](https://forthebadge.com) [![anlima's 42 minitalk Score](https://badge42.vercel.app/api/v2/cl9oe5ogt00110fm6h34z9iu9/project/2986314)](https://github.com/JaeSeoKim/badge42)
   
+</div> 
+
+<div align=center>
+
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/angelamcosta/minitalk" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/angelamcosta/minitalk" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/angelamcosta/minitalk" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/angelamcosta/minitalk" /> <img alt="Github License" src="https://img.shields.io/github/license/angelamcosta/minitalk" /> <a href="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/1a40875b-ebac-448a-bb65-c1350315dcea"><img src="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/1a40875b-ebac-448a-bb65-c1350315dcea.svg" alt="wakatime"></a>
+
 </div>
 
 ## :bookmark_tabs: Table of Contents
