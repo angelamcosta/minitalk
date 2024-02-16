@@ -3,9 +3,7 @@
 <div align=center>
 
   ![badge](https://raw.githubusercontent.com/angelamcosta/angelamcosta/main/42_badges/minitalke.png)
-  
-  [![anlima's 42 minitalk Score](https://badge42.vercel.app/api/v2/cl9oe5ogt00110fm6h34z9iu9/project/2986314)](https://github.com/JaeSeoKim/badge42)
-  
+    
 </div> 
 
 <div align=center>
@@ -54,4 +52,4 @@ client.
 ## Tasks
 
 - :ballot_box_with_check: Mandatory part
-- :white_large_square: Bonus part (ongoing)
+- :white_large_square: Bonus part
